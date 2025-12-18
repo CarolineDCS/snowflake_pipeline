@@ -1,0 +1,12 @@
+-- CREATION DE LA DATABASE
+CREATE DATABASE IF NOT EXISTS Health_app; 
+USE DATABASE Health_app;
+
+
+-- CREATION DU SCHEMA raw pour la reception des données
+CREATE OR ALTER SCHEMA raw;
+
+-- CREATION DU SHEMA QUI CONTIENT LES DONNEES TRAITEES staging
+CREATE OR ALTER SCHEMA staging;
+-- CREATION DU SCHEMA common pour la gestion des données
+CREATE OR ALTER SCHEMA common;
