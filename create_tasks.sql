@@ -1,6 +1,6 @@
-ALTER TASK common.com_insert_backup_task SUSPEND;
-ALTER TASK common.data_quality_task SUSPEND;
-ALTER TASK common.late_data_task  SUSPEND;
+--ALTER TASK common.com_insert_backup_task SUSPEND;
+--ALTER TASK common.data_quality_task SUSPEND;
+--ALTER TASK common.late_data_task  SUSPEND;
 
 
 
