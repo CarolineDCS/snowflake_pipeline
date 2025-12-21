@@ -4,8 +4,8 @@ Dans ce projet, j'ai créé une pipeline d'intégration de données d'un fichier
 L'application envoie des messages stockés dans le fichier data_source.csv. La pipeline vérifie la qualité des données, transforme les données puis les dispatche dans les tables finales.
 ## Stack technique
 * **Snowflake :**  Plateforme principale pour l'orchestration des pipelines de données, la modélisation via SQL avancé, l'automatisation des traitements avec les tâches (TASKS), et la gestion scalable des flux ELT en continu.
-* **Tâches Snowflake (TASKS) :**  Outil principal pour l'orchestration et l'automatisation des pipelines ELT, la planification cron des traitements SQL, la création de DAGs de dépendances entre tâches, et l'exécution serverless continue des transformations de données.
-**Internal Stage Snowflake :**  Zone de stockage temporaire principale au sein de Snowflake pour l'upload de fichiers CSV via PUT, le staging intermédiaire des données brutes avant COPY INTO, la configuration de file formats personnalisés (TIMESTAMP_FORMAT, délimiteurs), et l'intégration fluide des pipelines ELT avec les tâches automatisées.
+* **Tâches Snowflake (TASKS) :**  OOutil principal pour l’orchestration et l’automatisation des pipelines ELT, la planification cron des traitements SQL, la création de DAGs de dépendances entre tâches, et l’exécution continue des transformations de données dans un environnement virtuel.
+* **Internal Stage Snowflake :**  Zone de stockage temporaire principale au sein de Snowflake pour l'upload de fichiers CSV via PUT, le staging intermédiaire des données brutes avant COPY INTO, la configuration de file formats personnalisés (TIMESTAMP_FORMAT, délimiteurs), et l'intégration fluide des pipelines ELT avec les tâches automatisées.
 * **CSV :**  Format principal pour l'échange et le stockage intermédiaire de données brutes, la préparation des fichiers sources pour les pipelines ELT, l'export rapide depuis LibreOffice/Excel, et le chargement initial scalable vers Snowflake via COPY INTO.
 * **RBAC Snowflake :**  Système principal de contrôle d'accès basé sur les rôles, la gestion granulaire des privilèges sur bases/schémas/tables, l'attribution hiérarchique de rôles aux utilisateurs, et la sécurisation des pipelines de données selon le principe du moindre privilège.
 ## Axes étudiés
@@ -18,7 +18,6 @@ L'application envoie des messages stockés dans le fichier data_source.csv. La p
 ### Vision du responsable de la sécurité
 * Création des rôles de devops, d'ingénieur et de gestion de l'application.
 * Fichier : [role_by_dev_sec_ops_role](role_by_dev_sec_ops_role.sql)
-### Vision du devops
 * Il met en place la structure de la base de données en créant les tables dont la pipeline a besoin, le répertoire interne pour stocker le fichier fourni par l'application.
 * Fichiers :
   * [create_tables](create_tables.sql)
