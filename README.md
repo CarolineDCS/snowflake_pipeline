@@ -45,7 +45,9 @@ Le nom des processus doit être compris dans la liste :  HiH_ListenerManager, Hi
 
 
 Il faut exécuter dans cet ordre les fichiers suivants dans Snowflake :
+   * [role_by_adminl](role_by_admin.sql)  
    * [init_database](init_database.sql)
+   * [role_by_dev_sec_ops_role](role_by_dev_sec_ops_role.sql)
    * [create_tables](create_tables.sql) (dans le schéma RAW)
    * [create_stream](create_stream.sql) (dans le schéma RAW)
    * [create_functions](create_functions.sql) (dans le schéma COMMON)
@@ -53,10 +55,8 @@ Il faut exécuter dans cet ordre les fichiers suivants dans Snowflake :
    * [create_tasks](create_tasks.sql) (dans le schéma COMMON)
      
 Le fichier de données [data_source_csv](data_source_csv.csv) est à mettre dans internal_stage.
-Si vous souhaitez mettre en place les rôles, il faut exécuter dans cet ordre les fichiers suivants dans Snowflake :
-   * [role_by_adminl](role_by_admin.sql)
-   * [role_by_dev_sec_ops_role](role_by_dev_sec_ops_role.sql)
-
+ 
+   
 
 
 
