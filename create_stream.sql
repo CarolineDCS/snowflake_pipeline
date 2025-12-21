@@ -1,15 +1,15 @@
 -- CREATION d'UN FILE FORMAT POUR COMPRENDRE LES TYPES DU FICHIER DE DONNEES
-CREATE OR ALTER FILE FORMAT raw.csv_file
+CREATE OR ALTER FILE FORMAT common.csv_file
 TYPE=CSV
 FIELD_DELIMITER='|'
 TIMESTAMP_FORMAT='YYYYMMDD-HH24:MI:SS.FF3';
 
 -- Voir les options de file format
-desc file format raw.csv_file;
+desc file format common.csv_file;
 
 -- CREATION d'UN REPERTOIRE INTERNE A SNOWFLAKE OU L'ON MET LES FICHIERS
-CREATE OR ALTER STAGE raw.internal_stage
-FILE_FORMAT = 'raw.csv_file' 
+CREATE OR ALTER STAGE common.internal_stage
+FILE_FORMAT = 'common.csv_file' 
 ;
 
 -- CREATION D'UN ECOUTEUR SUR LE FICHIER
