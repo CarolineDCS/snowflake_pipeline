@@ -34,8 +34,17 @@ L'application envoie des messages stockés dans le fichier data_source.csv. La p
 * C'est lui qui met en place la pipeline à l'aide des outils préparés par le devops et les tasks de Snowflake.
 * Fichier : [create_tasks](create_tasks.sql)
 
-### Modèle RBAC
+## Modèle RBAC
 
+Schéma représentant le modèle RBAC mis en place.
+
+![Schéma représentant le modèle RBAC mis en place.](diagRBAC.png)
+
+## Pipeline
+
+Schéma représentant le graphe acyclique dirigé (DAG) de la pipeline mise en place.
+
+![Schéma représentant le graphe acyclique dirigé (DAG) de la pipeline mise en place.](diagPipeline.png)
 
 ## Valeur ajoutée
 Pipeline ELT automatisé et industrialisé qui transforme des logs CSV "bruts" en données analytiques propres et prêtes pour Power BI/Looker.
