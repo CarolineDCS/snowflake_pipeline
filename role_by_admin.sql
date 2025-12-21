@@ -1,6 +1,6 @@
 USE DATABASE HEALTH_APP;
 
-GRANT ROLE dev_sec_ops_role to USER XXX;
+
 
 --- Droits donnés par l'admin
 
@@ -13,3 +13,5 @@ GRANT CREATE INTEGRATION ON ACCOUNT TO ROLE dev_sec_ops_role WITH GRANT OPTION;
 GRANT EXECUTE TASK ON ACCOUNT TO ROLE dev_sec_ops_role WITH GRANT OPTION;
 
 USE SECONDARY ROLES NONE;
+
+GRANT ROLE dev_sec_ops_role to USER XXX;
