@@ -6,26 +6,12 @@ CREATE ROLE IF NOT EXISTS dev_ops_role;
 -- Accès de base
 GRANT USAGE ON DATABASE HEALTH_APP TO ROLE dev_ops_role;
 
+-- Pour la : 
 -- Création de tables
-GRANT CREATE TABLE ON SCHEMA HEALTH_APP.raw TO ROLE dev_ops_role;
-GRANT CREATE TABLE ON SCHEMA HEALTH_APP.staging TO ROLE dev_ops_role;
-GRANT CREATE TABLE ON SCHEMA HEALTH_APP.common TO ROLE dev_ops_role;
-
 -- Création de fonctions (UDF)
-GRANT CREATE FUNCTION ON SCHEMA HEALTH_APP.common TO ROLE dev_ops_role;
-
 -- Création de procédures stockées
-GRANT CREATE PROCEDURE ON SCHEMA HEALTH_APP.common TO ROLE dev_ops_role;
-
 -- Création de stages
-GRANT CREATE STAGE ON SCHEMA HEALTH_APP.raw TO ROLE dev_ops_role;
-
 -- Création de file formats
-GRANT CREATE FILE FORMAT ON SCHEMA HEALTH_APP.raw TO ROLE dev_ops_role;
-
-
-
-
 GRANT ALL ON SCHEMA HEALTH_APP.raw TO ROLE dev_ops_role ;
 GRANT ALL ON SCHEMA HEALTH_APP.staging TO ROLE dev_ops_role ;
 GRANT ALL ON SCHEMA HEALTH_APP.common TO ROLE dev_ops_role ;
