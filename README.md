@@ -1,9 +1,9 @@
-#SNOWFLAKE Project: Creating a Data Integration Pipeline
-##Project Description
+# SNOWFLAKE Project: Creating a Data Integration Pipeline
+## Project Description
 
 In this project, I created a data integration pipeline for a log file from a fictional healthcare application (however, the process names are taken from this GitHub repository: [GitHub](https://github.com/QuantikDataStudio/cours_snowflake/blob/main/dataset/HealthApp_2k.log)). The application sends messages that are stored in the data_source.csv file. The pipeline checks data quality, transforms the data, and then dispatches it to the final tables.
 
-##Technical Stack
+## Technical Stack
 
 * **Snowflake**: Primary platform for data pipeline orchestration, modeling via advanced SQL, process automation with tasks (TASKS), and scalable management of continuous ELT flows.
 * **Snowflake Tasks (TASKS)**: Primary tool for orchestrating and automating ELT pipelines, cron scheduling of SQL processes, creating DAGs of dependencies between tasks, and continuously executing data transformations in a virtual environment.
